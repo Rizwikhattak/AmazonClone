@@ -1,0 +1,18 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Amazon-Embers";
+  src: url("../Fonts/Amazon\ Ember.ttf") format("truetype"),
+    url("../Fonts/Amazon\ Ember\ Bold.ttf") format("truetype"),
+    url("../Fonts/Amazon\ Ember\ Cd\ RC\ Light.ttf") format("truetype"),
+    url("../Fonts/Amazon\ Ember\ Mono.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amazon-Embers", Arial, sans-serif;
+}
