@@ -3,4 +3,5 @@ header nav button,
 header nav a {
   font-size: 12px !important;
   font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
 }
