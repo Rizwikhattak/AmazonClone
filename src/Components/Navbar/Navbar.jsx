@@ -1,19 +1,31 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import Logo from "../Assets/Logo.png";
+import Logo from "../../Assets/Logo.png";
+import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
+
+import "./Navbar.css";
 const Navbar = () => {
   const [ProductMenu, setProductMenu] = useState(false);
   return (
     <>
-      <header className="bg-white">
+      <header className="w-svw">
         <nav
-          className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+          className="flex w-svw items-center justify-between p-2 lg:px-2 bg-slate-950 text-white"
           aria-label="Global"
         >
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+          <div className="flex lg:flex-none">
+            <a href="#" className="px-1.5 hover:border-2">
               <span className="sr-only">Your Company</span>
               <img className="h-8 w-auto" src={Logo} alt="" />
+            </a>
+
+            <a
+              href="#"
+              className="px-1.5 flex items-center pb-1.5 hover:border-2"
+            >
+              <IoLocationOutline />
+              Deliver to <br />
+              Pakistan
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -38,17 +50,22 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+
+          <div className="flex lg:flex w-80">
+            <input type="text" className="flex-grow px-2 py-4" />
+          </div>
+
+          <div className="hidden lg:flex items-center lg:gap-x-1">
             <div className="relative">
               <button
                 type="button"
-                className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+                className="flex items-center gap-x-1 text-sm font-semibold leading-6"
                 onClick={() => setProductMenu(!ProductMenu)}
                 aria-expanded="false"
               >
-                Product
+                🏳️‍⚧️ EN
                 <svg
-                  className="h-5 w-5 flex-none text-gray-400"
+                  className="h-3 w-3 flex-none text-gray-400"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -137,14 +154,11 @@ const Navbar = () => {
                     <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"></div>
                       <div className="flex-auto">
-                        <a
-                          href="#"
-                          className="block font-semibold text-gray-900"
-                        >
+                        <a href="#" className="block font-semibold ">
                           Automations
                           <span className="absolute inset-0"></span>
                         </a>
-                        <p className="mt-1 text-gray-600">
+                        <p className="mt-1 ">
                           Build strategic funnels that will convert
                         </p>
                       </div>
@@ -192,31 +206,34 @@ const Navbar = () => {
               )}
             </div>
 
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
+            <button
+              type="button"
+              className="flex items-center gap-x-1 text-sm font-semibold"
+              onClick={() => setProductMenu(!ProductMenu)}
+              aria-expanded="false"
             >
-              Features
+              Hello,Sign in
+              <br />
+              Accounts & Lists
+              <svg
+                className="h-3 w-3 flex-none text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <a href="#" className="text-sm font-semibold">
+              Return
+              <br />& Orders
             </a>
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Marketplace
-            </a>
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Company
-            </a>
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Log in <span aria-hidden="true">&rarr;</span>
+            <a href="#" className="text-sm font-semibold leading-6 flex">
+              Cart <IoCartOutline />
             </a>
           </div>
         </nav>
